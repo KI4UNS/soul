@@ -1,0 +1,27 @@
+using Microsoft.Xna.Framework;
+using Terraria.DataStructures;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace Dark.Items
+{
+    public class DarkSoul : ModItem
+    {
+        public override void SetDefaults()
+        {
+            item.name = "Dark Soul";
+            item.width = 22;
+            item.height = 22;
+            item.toolTip = "text";
+            item.value = 100;
+            item.rare = -12;
+            item.maxStack = 999;
+            ItemID.Sets.ItemNoGravity[item.type] = true;
+        }
+
+        public override DrawAnimation GetAnimation()
+        {
+            return new DrawAnimationVertical(15, 4);
+        }
+    }
+}
